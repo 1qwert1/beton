@@ -11,8 +11,7 @@ body, html {
   height: 100%; }
 
 body {
-  padding: 0 20px 0 20px;
-  z-index: 0; }
+  padding: 0 20px 0 20px; }
 
 a {
   text-decoration: none; }
@@ -23,8 +22,7 @@ a {
 .left-col {
   position: fixed;
   height: 100%;
-  width: 20%;
-  z-index: 1; }
+  width: 20%; }
   .left-col header {
     margin: 0 0 0 7px;
     top: 0;
@@ -212,6 +210,8 @@ footer {
         top: 30px; }
   #btn:checked ~ .left-col {
     left: 0px; }
+  #btn:checked ~ ._content {
+    left: 200px; }
 
   .left-col {
     position: fixed;
