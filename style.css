@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+* {
+  font-family: "Roboto", Serif;
+  font-weight: 300;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body, html {
+  height: 100%; }
+
+body {
+  padding: 0 20px 0 20px;
+  z-index: 0; }
+
+a {
+  text-decoration: none; }
+
+.headForMob {
+  display: none; }
+
+.left-col {
+  position: fixed;
+  height: 100%;
+  width: 20%;
+  z-index: 1; }
+  .left-col header {
+    margin: 0 0 0 7px;
+    top: 0;
+    padding-left: 10px;
+    min-height: 100%;
+    padding-top: 20px; }
+    .left-col header .logo {
+      padding: 0 10px 4px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      margin-bottom: 10px; }
+    .left-col header h1 {
+      font-size: 1.2em;
+      font-weight: 500;
+      padding-bottom: 20px; }
+    .left-col header ul {
+      padding: 0; }
+      .left-col header ul li {
+        padding: 0 0 5px;
+        color: rgba(0, 0, 0, 0.7);
+        list-style-type: none; }
+        .left-col header ul li:hover span {
+          color: #000;
+          font-weight: 400;
+          cursor: pointer; }
+        .left-col header ul li ul {
+          display: none;
+          height: 0;
+          transition: all 8s ease; }
+        .left-col header ul li a {
+          color: rgba(0, 0, 0, 0.7); }
+          .left-col header ul li a:hover {
+            text-decoration: none;
+            font-weight: 400;
+            color: #000; }
+      .left-col header ul #kal {
+        display: none; }
+        .left-col header ul #kal:checked + ul {
+          display: block;
+          padding: 0 0 0 15px;
+          height: inherit; }
+          .left-col header ul #kal:checked + ul li a {
+            font-size: 0.9em; }
+
+a:visited {
+  background-color: red; }
+
+._content {
+  width: 80%;
+  float: right;
+  display: block;
+  padding: 10px 0 0 50px; }
+
+.grid-item {
+  width: 23%; }
+  .grid-item .item-content {
+    position: relative; }
+    .grid-item .item-content img {
+      width: 100%;
+      cursor: pointer; }
+      .grid-item .item-content img:hover + span {
+        display: block; }
+    .grid-item .item-content span {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-top: 10%;
+      display: none;
+      margin: auto;
+      font-weight: 700; }
+      .grid-item .item-content span:hover {
+        display: block;
+        vertical-align: middle;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0.7;
+        cursor: pointer; }
+
+.grid-item--width2 {
+  width: 23%; }
+
+.grid-item--width3 {
+  width: 23%; }
+
+.hiden {
+  display: none; }
+
+.empty {
+  width: 50px; }
+
+footer {
+  margin-top: -50px;
+  font-size: 0.52em;
+  font-weight: 400;
+  padding-left: 10px; }
+
+.burger {
+  display: none; }
+
+.label {
+  width: 60px;
+  height: 60px;
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  z-index: 21;
+  padding: 10px;
+  transition: all 0.5s; }
+  .label div {
+    width: 40px;
+    height: 4px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    display: block; }
+  .label div:nth-child(2) {
+    margin-top: 14px;
+    margin-bottom: 14px; }
+
+.logo {
+  width: 100%; }
+  .logo img {
+    width: 100%; }
+
+@media only screen and (max-width: 768px) {
+  * {
+    font-size: 16px; }
+
+  body, html {
+    overflow-x: hidden; }
+
+  .empty {
+    display: none; }
+
+  .headForMob {
+    display: block;
+    width: 100%;
+    text-align: center;
+    float: right;
+    padding-top: 10px;
+    padding-left: 10px; }
+    .headForMob .logo {
+      padding: 0 10px 0 48px;
+      margin-top: 17px; }
+
+  .left-col header .logo {
+    border-bottom: none; }
+
+  header h1 {
+    display: none; }
+
+  ._content {
+    position: absolute;
+    top: 145px;
+    left: 0;
+    width: 100%;
+    float: none;
+    transition: all 1s ease;
+    padding-left: 5%; }
+
+  .grid-item--width2, .grid-item--width3, .grid-item {
+    width: 46%; }
+
+  .label {
+    display: block;
+    position: fixed;
+    transition: left 1s ease;
+    left: 0;
+    top: 30px; }
+    .label div {
+      transition: transform 0.2s; }
+
+  #btn:checked ~ .label {
+    left: 130px; }
+    #btn:checked ~ .label div {
+      position: absolute;
+      width: 56px; }
+      #btn:checked ~ .label div:nth-child(2) {
+        display: none; }
+      #btn:checked ~ .label div:nth-child(1) {
+        transform: rotate(135deg);
+        top: 30px; }
+      #btn:checked ~ .label div:nth-child(3) {
+        transform: rotate(-135deg);
+        top: 30px; }
+  #btn:checked ~ .left-col {
+    left: 0px; }
+
+  .left-col {
+    position: fixed;
+    left: -200px;
+    z-index: 20;
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    transition: all 1s ease;
+    padding-left: 10px; }
+    .left-col:hover {
+      left: 0; }
+    .left-col li {
+      display: block;
+      text-align: left;
+      margin-top: 20px; } }
+
+/*# sourceMappingURL=style.css.map */
